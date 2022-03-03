@@ -1,8 +1,8 @@
 class Stack:
-    def __init__(self, SIZE = 6):
+    def __init__(self, C_MAX = 6): # custom max
         self.stack = []
         self.top = -1
-        self.MAX = SIZE
+        self.MAX = C_MAX
     
     def push(self, value):
         if(self.isFull()): raise Exception("Stack full")
@@ -28,3 +28,6 @@ class Stack:
     
     def printStack(self):
         print(self.stack)
+        
+    def getSize(self):
+        return self.top+1
